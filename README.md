@@ -7,3 +7,19 @@ In this guided lab, you'll learn tips and tricks on creating a healthier app wit
 From a Java perspective, you'll try not only more conventional options like SQL and NoSQL but also some trendy new solutions in the market like MicroStream. You'll also have hands-on experience with this open-source ultrafast in-memory data persistence storage allows queries to be up to 1000x times faster than traditional relational databases.
 
 Link: https://devoxx.be/talk/?id=20173
+
+
+## Speakers
+
+* Elias Nogueira
+  * https://twitter.com/eliasnogueira
+  * https://www.linkedin.com/in/eliasnogueira/
+  * https://github.com/eliasnogueira
+* Otávio Santana
+  * https://twitter.com/otaviojava
+  * https://www.linkedin.com/in/otaviojava/
+  * https://github.com/otaviojava
+* KARINA VARELA
+  * https://twitter.com/kvarel4
+  * https://www.linkedin.com/in/kvarel4/
+  * https://github.com/kmacedovarela
