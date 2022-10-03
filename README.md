@@ -23,6 +23,12 @@ Link: https://devoxx.be/talk/?id=20173
   * https://www.linkedin.com/in/kvarel4/
   * https://github.com/kmacedovarela
 
+## Minimum requirement
+
+* Java 11
+* Git
+* Maven 3.8.1 or higher
+* An IDE that you know how to use
 
 
 ## References
