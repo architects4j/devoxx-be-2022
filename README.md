@@ -8,7 +8,6 @@ From a Java perspective, you'll try not only more conventional options like SQL 
 
 Link: https://devoxx.be/talk/?id=20173
 
-
 ## Speakers
 
 * Elias Nogueira
@@ -23,3 +22,17 @@ Link: https://devoxx.be/talk/?id=20173
   * https://twitter.com/kvarel4
   * https://www.linkedin.com/in/kvarel4/
   * https://github.com/kmacedovarela
+
+
+
+## References
+
+* [Microstream](https://microstream.one/)
+* [Microstream Docs](https://docs.microstream.one/manual/intro/welcome.html)
+* [Integration with CDI](https://dzone.com/articles/microstream-jakarta-ee-integration)
+
+### Integrations
+* [Open Liberty](https://dzone.com/articles/ultra-fast-microservices-when-microstream-meets-op)
+* [Wildfly](https://dzone.com/articles/ultra-fast-microservices-part-2-when-microstream-m)
+* [Payara](https://dzone.com/articles/ultra-fast-microservices-when-microstream-meets-pa)
+* [Helidon](https://dzone.com/articles/ultra-fast-microservices-helidon-microstream)
