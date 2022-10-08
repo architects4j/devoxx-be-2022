@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class GalaxyTest {
@@ -38,5 +40,31 @@ class GalaxyTest {
         Assertions.assertTrue(galaxy.isEmpty());
         galaxy.add(sun);
         Assertions.assertFalse(galaxy.isEmpty());
+        org.assertj.core.api.Assertions.assertThat(galaxy.getBodies())
+                .hasSize(1)
+                .contains(sun);
     }
+
+    @Test
+    public void shouldFindByName() {
+        galaxy.add(sun);
+        galaxy.add(earth);
+
+        Optional<CelestialBody> body = galaxy.findByName("Sun");
+        Assertions.assertTrue(body.isPresent());
+        Assertions.assertEquals(sun, body.orElseThrow());
+        Assertions.assertTrue(galaxy.findByName("unknown").isEmpty());
+    }
+
+    @Test
+    public void shouldDeleteById() {
+        galaxy.add(sun);
+        galaxy.add(earth);
+
+        Optional<CelestialBody> body = galaxy.findByName("Sun");
+        Assertions.assertTrue(body.isPresent());
+        galaxy.deleteById("Sun");
+        Assertions.assertTrue(galaxy.findByName("sun").isEmpty());
+    }
+
 }
