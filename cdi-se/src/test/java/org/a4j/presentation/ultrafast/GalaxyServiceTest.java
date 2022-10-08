@@ -21,10 +21,4 @@ class GalaxyServiceTest {
         Assertions.assertNotNull(service);
     }
 
-    @Test
-    public void shouldAdd(){
-        service.add(Bodies.SUN.get());
-        Assertions.assertFalse(service.getBodies().isEmpty());
-    }
-
 }
