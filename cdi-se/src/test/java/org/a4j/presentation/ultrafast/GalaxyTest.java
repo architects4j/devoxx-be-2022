@@ -35,7 +35,8 @@ class GalaxyTest {
 
     @Test
     public void shouldAddBody() {
+        Assertions.assertTrue(galaxy.isEmpty());
         galaxy.add(sun);
-        galaxy.
+        Assertions.assertFalse(galaxy.isEmpty());
     }
 }
