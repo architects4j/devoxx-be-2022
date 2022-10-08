@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 @Storage
@@ -17,6 +18,11 @@ public class Galaxy {
     public void add(CelestialBody body) {
         Objects.requireNonNull(body, "body is not null");
         this.bodies.add(body);
+    }
+
+    public void add(Supplier<CelestialBody> supplier) {
+        Objects.requireNonNull(supplier, "supplier is required");
+        add(supplier.get());
     }
 
     public Optional<CelestialBody> findByName(String name) {
