@@ -12,17 +12,6 @@ class GalaxyTest {
 
     private Galaxy galaxy;
 
-    private CelestialBody sun = CelestialBody.builder().name("Sun")
-            .size(1231231231)
-            .type(Type.STAR)
-            .habitable(false).build();
-
-
-    private CelestialBody earth = CelestialBody.builder().name("Earth")
-            .size(1231231231)
-            .type(Type.PLANET)
-            .habitable(true)
-            .build();
 
     @BeforeEach
     public void setUp() {
@@ -32,34 +21,34 @@ class GalaxyTest {
     @Test
     public void shouldReturnErrorWhenAddNullBody() {
         Assertions.assertThrows(NullPointerException.class, () ->
-                galaxy.add(null));
+                galaxy.add((CelestialBody) null));
     }
 
     @Test
     public void shouldAddBody() {
         Assertions.assertTrue(galaxy.isEmpty());
-        galaxy.add(sun);
+        galaxy.add(Bodies.SUN);
         Assertions.assertFalse(galaxy.isEmpty());
         org.assertj.core.api.Assertions.assertThat(galaxy.getBodies())
                 .hasSize(1)
-                .contains(sun);
+                .contains(Bodies.SUN.get());
     }
 
     @Test
     public void shouldFindByName() {
-        galaxy.add(sun);
-        galaxy.add(earth);
+        galaxy.add(Bodies.SUN);
+        galaxy.add(Bodies.EARTH);
 
         Optional<CelestialBody> body = galaxy.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
-        Assertions.assertEquals(sun, body.orElseThrow());
+        Assertions.assertEquals(Bodies.SUN.get(), body.orElseThrow());
         Assertions.assertTrue(galaxy.findByName("unknown").isEmpty());
     }
 
     @Test
     public void shouldDeleteById() {
-        galaxy.add(sun);
-        galaxy.add(earth);
+        galaxy.add(Bodies.SUN.get());
+        galaxy.add(Bodies.EARTH);
 
         Optional<CelestialBody> body = galaxy.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
