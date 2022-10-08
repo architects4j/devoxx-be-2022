@@ -33,11 +33,14 @@ Link: https://devoxx.be/talk/?id=20173
 
 ## References
 
+### Documentation
+
 * [Microstream](https://microstream.one/)
 * [Microstream Docs](https://docs.microstream.one/manual/intro/welcome.html)
 * [Integration with CDI](https://dzone.com/articles/microstream-jakarta-ee-integration)
 
 ### Integrations
+
 * [Open Liberty](https://dzone.com/articles/ultra-fast-microservices-when-microstream-meets-op)
 * [Wildfly](https://dzone.com/articles/ultra-fast-microservices-part-2-when-microstream-m)
 * [Payara](https://dzone.com/articles/ultra-fast-microservices-when-microstream-meets-pa)
