@@ -10,6 +10,18 @@ class GalaxyTest {
 
     private Galaxy galaxy;
 
+    private CelestialBody sun = CelestialBody.builder().name("Sun")
+            .size(1231231231)
+            .type(Type.STAR)
+            .habitable(false).build();
+
+
+    private CelestialBody earth = CelestialBody.builder().name("Earth")
+            .size(1231231231)
+            .type(Type.PLANET)
+            .habitable(true)
+            .build();
+
     @BeforeEach
     public void setUp() {
         this.galaxy = new Galaxy();
@@ -23,6 +35,7 @@ class GalaxyTest {
 
     @Test
     public void shouldAddBody() {
-
+        galaxy.add(sun);
+        galaxy.
     }
 }

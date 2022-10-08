@@ -41,6 +41,14 @@ public class Galaxy {
         return Collections.unmodifiableSet(this.bodies);
     }
 
+    public int size() {
+        return this.bodies.size();
+    }
+
+    public boolean isEmpty() {
+        return this.bodies.isEmpty();
+    }
+
     @Override
     public String toString() {
         return "Galaxy{" +
