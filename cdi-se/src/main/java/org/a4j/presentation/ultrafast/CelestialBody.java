@@ -12,7 +12,7 @@ public class CelestialBody {
 
     private Type type;
 
-    public CelestialBody(String name, long size, boolean habitable, Type type) {
+    CelestialBody(String name, long size, boolean habitable, Type type) {
         this.name = name;
         this.size = size;
         this.habitable = habitable;
