@@ -37,9 +37,9 @@ class TeamTest {
         team.add(Players.MARIO);
         team.add(Players.LUIGI);
 
-        Optional<Player> body = team.findByName("Sun");
-        Assertions.assertTrue(body.isPresent());
-        Assertions.assertEquals(Players.MARIO.get(), body.orElseThrow());
+        Optional<Player> player = team.findByName("Mario");
+        Assertions.assertTrue(player.isPresent());
+        Assertions.assertEquals(Players.MARIO.get(), player.orElseThrow());
         Assertions.assertTrue(team.findByName("unknown").isEmpty());
     }
 
@@ -48,10 +48,10 @@ class TeamTest {
         team.add(Players.MARIO.get());
         team.add(Players.LUIGI);
 
-        Optional<Player> body = team.findByName("Sun");
-        Assertions.assertTrue(body.isPresent());
-        team.deleteById("Sun");
-        Assertions.assertTrue(team.findByName("sun").isEmpty());
+        Optional<Player> player = team.findByName("Mario");
+        Assertions.assertTrue(player.isPresent());
+        team.deleteById("Mario");
+        Assertions.assertTrue(team.findByName("Mario").isEmpty());
     }
 
 }
