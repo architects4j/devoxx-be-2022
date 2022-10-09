@@ -22,8 +22,9 @@ public class TeamResource {
     }
 
     @PUT
-    public void add(Player player){
+    public Response add(Player player){
         this.service.add(player);
+        return Response.accepted(player).build();
     }
 
     @GET
