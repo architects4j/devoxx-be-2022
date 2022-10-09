@@ -34,23 +34,27 @@ public class App {
             Object root = manager.root();
             System.out.println("the root value: " + root);
             final GalaxyService service= container.select(GalaxyService.class).get();
-            Player sun = Player.builder().name("Sun")
-                    .size(1231231231)
-                    .type(Position.STAR)
-                    .habitable(false).build();
-
-            Player earth = Player.builder().name("Earth")
-                    .size(1231231231)
-                    .type(Position.PLANET)
-                    .habitable(true)
+            Player mario = Player.builder()
+                    .name("Mario")
+                    .score(10L)
+                    .position(Position.ATTACKER)
+                    .city("Salvador")
                     .build();
-            service.add(sun);
-            service.add(earth);
 
-            System.out.println("The bodies are: " + service.getNames());
-            System.out.println("The Sun search: " + service.findById("Sun"));
-            service.delete("Sun");
-            System.out.println("The Sun search: " + service.findById("Sun"));
+            Player luigi = Player.builder()
+                    .name("Luigi")
+                    .score(20L)
+                    .position(Position.ATTACKER)
+                    .city("Lisbon")
+                    .build();
+
+            service.add(mario);
+            service.add(luigi);
+
+            System.out.println("The players are: " + service.getNames());
+            System.out.println("The Mario search: " + service.findById("Mario"));
+            service.delete("Mario");
+            System.out.println("The Sun search: " + service.findById("Mario"));
 
         }
     }

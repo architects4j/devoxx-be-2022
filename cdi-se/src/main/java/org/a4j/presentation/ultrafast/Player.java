@@ -3,16 +3,10 @@ package org.a4j.presentation.ultrafast;
 import java.util.Objects;
 
 public class Player {
-
     private final String name;
-
     private final long score;
-
     private final Position position;
-
     private final String city;
-
-
     Player(String name, long score, Position position, String city) {
         this.name = name;
         this.score = score;
@@ -45,7 +39,10 @@ public class Player {
             return false;
         }
         Player player = (Player) o;
-        return score == player.score && Objects.equals(name, player.name) && position == player.position && Objects.equals(city, player.city);
+        return score == player.score
+                && Objects.equals(name, player.name)
+                && position == player.position
+                && Objects.equals(city, player.city);
     }
 
     @Override
@@ -61,5 +58,9 @@ public class Player {
                 ", position=" + position +
                 ", city='" + city + '\'' +
                 '}';
+    }
+
+    public static PlayerBuilder builder() {
+        return new PlayerBuilder();
     }
 }
