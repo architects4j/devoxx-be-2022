@@ -25,28 +25,28 @@ class TeamTest {
     @Test
     public void shouldAddBody() {
         Assertions.assertTrue(team.isEmpty());
-        team.add(Bodies.SUN);
+        team.add(Players.MARIO);
         Assertions.assertFalse(team.isEmpty());
         org.assertj.core.api.Assertions.assertThat(team.getPlayers())
                 .hasSize(1)
-                .contains(Bodies.SUN.get());
+                .contains(Players.MARIO.get());
     }
 
     @Test
     public void shouldFindByName() {
-        team.add(Bodies.SUN);
-        team.add(Bodies.EARTH);
+        team.add(Players.MARIO);
+        team.add(Players.LUIGI);
 
         Optional<Player> body = team.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
-        Assertions.assertEquals(Bodies.SUN.get(), body.orElseThrow());
+        Assertions.assertEquals(Players.MARIO.get(), body.orElseThrow());
         Assertions.assertTrue(team.findByName("unknown").isEmpty());
     }
 
     @Test
     public void shouldDeleteById() {
-        team.add(Bodies.SUN.get());
-        team.add(Bodies.EARTH);
+        team.add(Players.MARIO.get());
+        team.add(Players.LUIGI);
 
         Optional<Player> body = team.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
