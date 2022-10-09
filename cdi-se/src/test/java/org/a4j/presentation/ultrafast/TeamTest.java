@@ -27,7 +27,7 @@ class TeamTest {
         Assertions.assertTrue(team.isEmpty());
         team.add(Bodies.SUN);
         Assertions.assertFalse(team.isEmpty());
-        org.assertj.core.api.Assertions.assertThat(team.getBodies())
+        org.assertj.core.api.Assertions.assertThat(team.getPlayers())
                 .hasSize(1)
                 .contains(Bodies.SUN.get());
     }

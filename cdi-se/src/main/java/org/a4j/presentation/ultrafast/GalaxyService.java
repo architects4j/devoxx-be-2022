@@ -28,10 +28,10 @@ public class GalaxyService {
     }
 
     public String getNames() {
-        return this.team.getCelestialNames();
+        return this.team.getPlayersName();
     }
 
     public Set<Player> getBodies() {
-        return this.team.getBodies();
+        return this.team.getPlayers();
     }
 }

@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 @Storage
 public class Team {
 
-    private final Set<Player> bodies = new HashSet<>();
+    private final Set<Player> players = new HashSet<>();
 
-    public void add(Player body) {
-        Objects.requireNonNull(body, "body is not null");
-        this.bodies.add(body);
+    public void add(Player player) {
+        Objects.requireNonNull(player, "player is not null");
+        this.players.add(player);
     }
 
     public void add(Supplier<Player> supplier) {
@@ -27,38 +27,38 @@ public class Team {
 
     public Optional<Player> findByName(String name) {
         Objects.requireNonNull(name, "name is required");
-        return this.bodies.stream()
+        return this.players.stream()
                 .filter(b -> name.equals(b.getName()))
                 .findFirst();
     }
 
     public void deleteById(String name) {
         Objects.requireNonNull(name, "name is required");
-        this.bodies.removeIf(b -> name.equals(b.getName()));
+        this.players.removeIf(b -> name.equals(b.getName()));
     }
 
-    public String getCelestialNames(){
-        return bodies.stream()
+    public String getPlayersName(){
+        return players.stream()
                 .map(Player::getName)
                 .collect(Collectors.joining(","));
     }
 
-    public Set<Player> getBodies() {
-        return Collections.unmodifiableSet(this.bodies);
+    public Set<Player> getPlayers() {
+        return Collections.unmodifiableSet(this.players);
     }
 
     public int size() {
-        return this.bodies.size();
+        return this.players.size();
     }
 
     public boolean isEmpty() {
-        return this.bodies.isEmpty();
+        return this.players.isEmpty();
     }
 
     @Override
     public String toString() {
-        return "Galaxy{" +
-                "bodies=" + bodies +
+        return "Team{" +
+                "players=" + players +
                 '}';
     }
 }
