@@ -38,6 +38,9 @@ curl --location --request GET 'http://localhost:8080/team'
 
 curl --location --request GET 'http://localhost:8080/team/Mario'
 
+curl --location --request DELETE 'http://localhost:8080/team/Luigi'
+
+curl --location --request GET 'http://localhost:8080/team/Luigi'
 
 ```
 
