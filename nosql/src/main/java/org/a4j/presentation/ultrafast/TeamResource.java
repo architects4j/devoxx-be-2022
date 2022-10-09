@@ -15,30 +15,30 @@ import javax.ws.rs.core.Response;
 public class TeamResource {
 
     @Inject
-    private TeamService service;
+    private Team team;
 
     @GET
     public Iterable<Player> getPlayer() {
-        return this.service.getPlayers();
+        return this.team.findAll();
     }
 
     @PUT
     public Response add(Player player){
-        this.service.add(player);
+        this.team.save(player);
         return Response.accepted(player).build();
     }
 
     @GET
     @Path("{name}")
     public Player findBy(@PathParam("name") String name) {
-        return this.service.findById(name)
+        return this.team.findById(name)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 
     @DELETE
     @Path("{name}")
     public void deleteById(@PathParam("name") String name) {
-        this.service.delete(name);
+        this.team.deleteById(name);
     }
 
 }
