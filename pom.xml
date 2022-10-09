@@ -12,5 +12,6 @@
     <module>microprofile</module>
     <module>jakarta-ee</module>
    <module>nosql</module>
+   <module>nosql-se</module>
   </modules>
 </project>
