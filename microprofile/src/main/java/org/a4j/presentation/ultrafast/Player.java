@@ -14,7 +14,7 @@ public class Player {
     private final String city;
 
     @JsonbCreator
-    Player(@JsonbProperty("name") String name,
+    public Player(@JsonbProperty("name") String name,
            @JsonbProperty("score") long score,
            @JsonbProperty("position") Position position,
            @JsonbProperty("city") String city) {
