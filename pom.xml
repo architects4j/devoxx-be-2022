@@ -11,5 +11,6 @@
     <module>cdi-se</module>
     <module>microprofile</module>
     <module>jakarta-ee</module>
+   <module>nosql</module>
   </modules>
 </project>
