@@ -1,4 +1,4 @@
-package org.a4j.workshop.helidon.restaurant.infra;
+package org.a4j.presentation.ultrafast.infra;
 
 import javax.json.bind.config.PropertyVisibilityStrategy;
 import java.lang.reflect.Field;

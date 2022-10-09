@@ -1,4 +1,4 @@
-package org.a4j.workshop.helidon.restaurant;
+package org.a4j.presentation.ultrafast;
 
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
