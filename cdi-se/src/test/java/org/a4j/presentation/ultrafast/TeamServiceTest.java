@@ -10,7 +10,7 @@ import javax.inject.Inject;
 
 @EnableAutoWeld
 @AddExtensions(StorageExtension.class)
-class GalaxyServiceTest {
+class TeamServiceTest {
 
 
     @Inject

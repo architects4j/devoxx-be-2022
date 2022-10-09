@@ -11,27 +11,27 @@ import java.util.Set;
 public class GalaxyService {
 
     @Inject
-    private Galaxy galaxy;
+    private Team team;
 
     @Store
     public void add(CelestialBody body) {
-        this.galaxy.add(body);
+        this.team.add(body);
     }
 
     @Store
     public void delete(String name) {
-        this.galaxy.deleteById(name);
+        this.team.deleteById(name);
     }
 
     public Optional<CelestialBody> findById(String name){
-        return this.galaxy.findByName(name);
+        return this.team.findByName(name);
     }
 
     public String getNames() {
-        return this.galaxy.getCelestialNames();
+        return this.team.getCelestialNames();
     }
 
     public Set<CelestialBody> getBodies() {
-        return this.galaxy.getBodies();
+        return this.team.getBodies();
     }
 }

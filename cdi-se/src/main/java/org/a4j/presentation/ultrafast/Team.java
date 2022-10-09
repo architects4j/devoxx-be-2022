@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 @Storage
-public class Galaxy {
+public class Team {
 
     private final Set<CelestialBody> bodies = new HashSet<>();
 
