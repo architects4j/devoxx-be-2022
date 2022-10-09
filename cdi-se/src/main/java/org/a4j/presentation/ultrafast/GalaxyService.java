@@ -12,17 +12,14 @@ public class GalaxyService {
 
     @Inject
     private Team team;
-
     @Store
     public void add(Player body) {
         this.team.add(body);
     }
-
     @Store
     public void delete(String name) {
         this.team.deleteById(name);
     }
-
     public Optional<Player> findById(String name){
         return this.team.findByName(name);
     }
