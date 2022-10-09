@@ -1,5 +1,8 @@
 package org.a4j.presentation.ultrafast;
 
+import jakarta.nosql.mapping.Column;
+import jakarta.nosql.mapping.Entity;
+import jakarta.nosql.mapping.Id;
 import org.a4j.presentation.ultrafast.infra.FieldPropertyVisibilityStrategy;
 
 import javax.json.bind.annotation.JsonbCreator;
@@ -8,11 +11,21 @@ import javax.json.bind.annotation.JsonbVisibility;
 import java.util.Objects;
 
 @JsonbVisibility(FieldPropertyVisibilityStrategy.class)
+@Entity
 public class Player {
-    private final String name;
-    private final long score;
-    private final Position position;
-    private final String city;
+
+
+    @Id
+    private String name;
+
+    @Column
+    private long score;
+
+    @Column
+    private Position position;
+
+    @Column
+    private String city;
 
     @JsonbCreator
     public Player(@JsonbProperty("name") String name,
@@ -23,6 +36,9 @@ public class Player {
         this.score = score;
         this.position = position;
         this.city = city;
+    }
+
+    public Player() {
     }
 
     public String getName() {
