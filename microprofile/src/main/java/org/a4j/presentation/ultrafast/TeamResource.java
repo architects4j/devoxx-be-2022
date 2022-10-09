@@ -11,7 +11,7 @@ import javax.ws.rs.core.Response;
 
 @Path("/team")
 @ApplicationScoped
-public class GalaxyResource {
+public class TeamResource {
 
     @Inject
     private TeamService service;
