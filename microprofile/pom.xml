@@ -18,7 +18,7 @@
         <package>org.a4j.presentation.ultrafast</package>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>11</maven.compiler.source>
-        <final.name>restaurant</final.name>
+        <final.name>team</final.name>
         <helidonVersion>2.5.3</helidonVersion>
     </properties>
     <dependencies>
