@@ -44,7 +44,7 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>galaxy</finalName>
+        <finalName>team</finalName>
     </build>
     <profiles>
         <profile>
