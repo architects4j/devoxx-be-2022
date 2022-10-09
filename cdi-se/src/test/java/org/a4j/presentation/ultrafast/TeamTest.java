@@ -19,7 +19,7 @@ class TeamTest {
     @Test
     public void shouldReturnErrorWhenAddNullBody() {
         Assertions.assertThrows(NullPointerException.class, () ->
-                team.add((CelestialBody) null));
+                team.add((Player) null));
     }
 
     @Test
@@ -37,7 +37,7 @@ class TeamTest {
         team.add(Bodies.SUN);
         team.add(Bodies.EARTH);
 
-        Optional<CelestialBody> body = team.findByName("Sun");
+        Optional<Player> body = team.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
         Assertions.assertEquals(Bodies.SUN.get(), body.orElseThrow());
         Assertions.assertTrue(team.findByName("unknown").isEmpty());
@@ -48,7 +48,7 @@ class TeamTest {
         team.add(Bodies.SUN.get());
         team.add(Bodies.EARTH);
 
-        Optional<CelestialBody> body = team.findByName("Sun");
+        Optional<Player> body = team.findByName("Sun");
         Assertions.assertTrue(body.isPresent());
         team.deleteById("Sun");
         Assertions.assertTrue(team.findByName("sun").isEmpty());

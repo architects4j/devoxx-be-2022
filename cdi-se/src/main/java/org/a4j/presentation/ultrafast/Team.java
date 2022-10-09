@@ -13,19 +13,19 @@ import java.util.stream.Collectors;
 @Storage
 public class Team {
 
-    private final Set<CelestialBody> bodies = new HashSet<>();
+    private final Set<Player> bodies = new HashSet<>();
 
-    public void add(CelestialBody body) {
+    public void add(Player body) {
         Objects.requireNonNull(body, "body is not null");
         this.bodies.add(body);
     }
 
-    public void add(Supplier<CelestialBody> supplier) {
+    public void add(Supplier<Player> supplier) {
         Objects.requireNonNull(supplier, "supplier is required");
         add(supplier.get());
     }
 
-    public Optional<CelestialBody> findByName(String name) {
+    public Optional<Player> findByName(String name) {
         Objects.requireNonNull(name, "name is required");
         return this.bodies.stream()
                 .filter(b -> name.equals(b.getName()))
@@ -39,11 +39,11 @@ public class Team {
 
     public String getCelestialNames(){
         return bodies.stream()
-                .map(CelestialBody::getName)
+                .map(Player::getName)
                 .collect(Collectors.joining(","));
     }
 
-    public Set<CelestialBody> getBodies() {
+    public Set<Player> getBodies() {
         return Collections.unmodifiableSet(this.bodies);
     }
 

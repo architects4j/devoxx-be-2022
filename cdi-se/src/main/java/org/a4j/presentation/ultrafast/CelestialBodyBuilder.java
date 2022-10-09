@@ -4,7 +4,7 @@ public class CelestialBodyBuilder {
     private String name;
     private long size;
     private boolean habitable;
-    private Type type;
+    private Position position;
 
     public CelestialBodyBuilder name(String name) {
         this.name = name;
@@ -21,12 +21,12 @@ public class CelestialBodyBuilder {
         return this;
     }
 
-    public CelestialBodyBuilder type(Type type) {
-        this.type = type;
+    public CelestialBodyBuilder type(Position position) {
+        this.position = position;
         return this;
     }
 
-    public CelestialBody build() {
-        return new CelestialBody(name, size, habitable, type);
+    public Player build() {
+        return new Player(name, size, habitable, position);
     }
 }

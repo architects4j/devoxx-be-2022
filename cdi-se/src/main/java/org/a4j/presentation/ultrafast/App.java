@@ -34,14 +34,14 @@ public class App {
             Object root = manager.root();
             System.out.println("the root value: " + root);
             final GalaxyService service= container.select(GalaxyService.class).get();
-            CelestialBody sun = CelestialBody.builder().name("Sun")
+            Player sun = Player.builder().name("Sun")
                     .size(1231231231)
-                    .type(Type.STAR)
+                    .type(Position.STAR)
                     .habitable(false).build();
 
-            CelestialBody earth = CelestialBody.builder().name("Earth")
+            Player earth = Player.builder().name("Earth")
                     .size(1231231231)
-                    .type(Type.PLANET)
+                    .type(Position.PLANET)
                     .habitable(true)
                     .build();
             service.add(sun);

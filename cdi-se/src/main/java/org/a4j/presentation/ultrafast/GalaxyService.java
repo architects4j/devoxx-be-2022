@@ -14,7 +14,7 @@ public class GalaxyService {
     private Team team;
 
     @Store
-    public void add(CelestialBody body) {
+    public void add(Player body) {
         this.team.add(body);
     }
 
@@ -23,7 +23,7 @@ public class GalaxyService {
         this.team.deleteById(name);
     }
 
-    public Optional<CelestialBody> findById(String name){
+    public Optional<Player> findById(String name){
         return this.team.findByName(name);
     }
 
@@ -31,7 +31,7 @@ public class GalaxyService {
         return this.team.getCelestialNames();
     }
 
-    public Set<CelestialBody> getBodies() {
+    public Set<Player> getBodies() {
         return this.team.getBodies();
     }
 }
