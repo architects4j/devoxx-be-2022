@@ -1,7 +1,10 @@
 package org.a4j.presentation.ultrafast;
 
+import javax.json.bind.annotation.JsonbVisibility;
 import java.util.Objects;
+import org.a4j.presentation.ultrafast.infra.FieldPropertyVisibilityStrategy;
 
+@JsonbVisibility(FieldPropertyVisibilityStrategy.class)
 public class Player {
     private final String name;
     private final long score;
