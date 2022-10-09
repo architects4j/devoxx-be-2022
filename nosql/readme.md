@@ -26,7 +26,7 @@ http://localhost:8080/index.html
 ## Using Docker
 
 1. Install docker: https://www.docker.com/
-1. https://hub.docker.com/_/mongodb
+1. https://hub.docker.com/_/mongo
 1. Run docker command
 1. Run MongoDB: verify MongoDB image name with the command `docker images`, it can be mongodb or mongo, and then execute this
     * `docker run -d --name mongodb-instance -p 27017:27017 mongo`
@@ -35,45 +35,20 @@ http://localhost:8080/index.html
 To execute the tests:
 
 ```shell
-curl --location --request POST 'http://localhost:8080/restaurants' \
+curl --location --request PUT 'http://localhost:8080/team' \
 --header 'Content-Type: application/json' \
---data-raw '{"name": "water", "description": "Water appears as a clear, nontoxic liquid composed of hydrogen and oxygen, essential for life.", "type": "BEVERAGE", 
-"expires": "2025-12-03", "ingredients": [{"name": "water", "unit": "L", "quantity": 2}]}'
+--data-raw '{"name": "Mario", "score": 10, "position": "ATTACKER", "city": "Salvador" }'
 
-curl --location --request POST 'http://localhost:8080/restaurants' \
+curl --location --request PUT 'http://localhost:8080/team' \
 --header 'Content-Type: application/json' \
---data-raw '{"name": "coconut-water", "description": "Coconut water is the clear liquid inside coconuts.", "type": "BEVERAGE", 
-"expires": "2025-12-03", "ingredients": [{"name": "coconut water", "unit": "L", "quantity": 1}]}'
+--data-raw '{"name": "Luigi", "score": 20, "position": "DEFENDER", "city": "Lisbon" }'
 
+curl --location --request GET 'http://localhost:8080/team'
 
-curl --location --request GET 'http://localhost:8080/restaurants/water'
+curl --location --request GET 'http://localhost:8080/team/Mario'
 
-curl --location --request GET 'http://localhost:8080/restaurants'
+curl --location --request DELETE 'http://localhost:8080/team/Luigi'
+
+curl --location --request GET 'http://localhost:8080/team/Luigi'
+
 ```
-
-Validations tests:
-
-```shell
-curl --location --request POST 'http://localhost:8080/restaurants' \
---header 'Content-Type: application/json' \
---data-raw '{"description": "Water appears as a clear, nontoxic liquid composed of hydrogen and oxygen, essential for life.", "type": "BEVERAGE", "expires": "2030-12-03"}'
-
-curl --location --request POST 'http://localhost:8080/restaurants' \
---header 'Content-Type: application/json' \
---data-raw '{"name": "water", "description": "Water appears as a clear, nontoxic liquid composed of hydrogen and oxygen, essential for life.", "type": "BEVERAGE", "expires": "2000-12-03"}'
-
-curl --location --request POST 'http://localhost:8080/restaurants' \
---header 'Content-Type: application/json' \
---data-raw '{"name": "w", "description": "Water appears as a clear, nontoxic liquid composed of hydrogen and oxygen, essential for life.", "type": "BEVERAGE", "expires": "2025-12-03"}'
-```
-
-
-## Specification examples
-
-By default, there is always the creation of a JAX-RS application class to define the path on which the JAX-RS endpoints are available.
-
-Also, a simple Hello world endpoint is created, have a look at the class **HelloController**.
-
-More information on MicroProfile can be found [here](https://microprofile.io/)
-
-
