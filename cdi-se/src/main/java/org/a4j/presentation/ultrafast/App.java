@@ -33,7 +33,7 @@ public class App {
             StorageManager manager = container.select(StorageManager.class).get();
             Object root = manager.root();
             System.out.println("the root value: " + root);
-            final GalaxyService service= container.select(GalaxyService.class).get();
+            final TeamService service= container.select(TeamService.class).get();
             Player mario = Player.builder()
                     .name("Mario")
                     .score(10L)

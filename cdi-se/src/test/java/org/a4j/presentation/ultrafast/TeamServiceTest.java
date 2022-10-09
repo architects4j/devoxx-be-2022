@@ -14,7 +14,7 @@ class TeamServiceTest {
 
 
     @Inject
-    private GalaxyService service;
+    private TeamService service;
 
     @Test
     public void shouldInjectService() {

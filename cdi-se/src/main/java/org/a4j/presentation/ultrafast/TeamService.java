@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.Set;
 
 @ApplicationScoped
-public class GalaxyService {
+public class TeamService {
 
     @Inject
     private Team team;
