@@ -1,5 +1,7 @@
 package org.a4j.presentation.ultrafast;
 
+import javax.json.bind.annotation.JsonbCreator;
+import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbVisibility;
 import java.util.Objects;
 import org.a4j.presentation.ultrafast.infra.FieldPropertyVisibilityStrategy;
@@ -10,7 +12,12 @@ public class Player {
     private final long score;
     private final Position position;
     private final String city;
-    Player(String name, long score, Position position, String city) {
+
+    @JsonbCreator
+    Player(@JsonbProperty("name") String name,
+           @JsonbProperty("score") long score,
+           @JsonbProperty("position") Position position,
+           @JsonbProperty("city") String city) {
         this.name = name;
         this.score = score;
         this.position = position;
