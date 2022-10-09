@@ -9,28 +9,26 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response;
 
-@Path("/galaxy")
+@Path("/team")
 @ApplicationScoped
 public class GalaxyResource {
 
     @Inject
-    private GalaxyService service;
-
-
+    private TeamService service;
 
     @GET
-    public Iterable<CelestialBody> getBodies() {
-        return this.service.getBodies();
+    public Iterable<Player> getPlayer() {
+        return this.service.getPlayers();
     }
 
     @PUT
-    public void add(CelestialBody body){
-        this.service.add(body);
+    public void add(Player player){
+        this.service.add(player);
     }
 
     @GET
     @Path("{name}")
-    public CelestialBody findBy(@PathParam("name") String name) {
+    public Player findBy(@PathParam("name") String name) {
         return this.service.findById(name)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }

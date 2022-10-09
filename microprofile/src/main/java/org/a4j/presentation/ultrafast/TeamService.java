@@ -28,7 +28,7 @@ public class TeamService {
         return this.team.getPlayersName();
     }
 
-    public Set<Player> getBodies() {
+    public Set<Player> getPlayers() {
         return this.team.getPlayers();
     }
 }
