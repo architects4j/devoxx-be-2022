@@ -4,6 +4,7 @@ import one.microstream.integrations.cdi.types.Store;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
 
@@ -13,14 +14,17 @@ public class TeamService {
     @Inject
     private Team team;
     @Store
-    public void add(Player body) {
-        this.team.add(body);
+    public void add(Player player) {
+        Objects.requireNonNull(player, "player is not null");
+        this.team.add(player);
     }
     @Store
     public void delete(String name) {
-        this.team.deleteById(name);
+        Objects.requireNonNull(name, "name is not null");
+        this.team.deleteByName(name);
     }
     public Optional<Player> findById(String name){
+        Objects.requireNonNull(name, "name is not null");
         return this.team.findByName(name);
     }
 
