@@ -16,24 +16,20 @@ public class Team {
     private final Set<Player> players = new HashSet<>();
 
     public void add(Player player) {
-        Objects.requireNonNull(player, "player is not null");
         this.players.add(player);
     }
 
     public void add(Supplier<Player> supplier) {
-        Objects.requireNonNull(supplier, "supplier is required");
         add(supplier.get());
     }
 
     public Optional<Player> findByName(String name) {
-        Objects.requireNonNull(name, "name is required");
         return this.players.stream()
                 .filter(b -> name.equals(b.getName()))
                 .findFirst();
     }
 
-    public void deleteById(String name) {
-        Objects.requireNonNull(name, "name is required");
+    public void deleteByName(String name) {
         this.players.removeIf(b -> name.equals(b.getName()));
     }
 

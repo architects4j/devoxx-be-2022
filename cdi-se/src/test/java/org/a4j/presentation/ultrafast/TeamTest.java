@@ -17,12 +17,6 @@ class TeamTest {
     }
 
     @Test
-    public void shouldReturnErrorWhenAddNullBody() {
-        Assertions.assertThrows(NullPointerException.class, () ->
-                team.add((Player) null));
-    }
-
-    @Test
     public void shouldAddBody() {
         Assertions.assertTrue(team.isEmpty());
         team.add(Players.MARIO);
@@ -50,7 +44,7 @@ class TeamTest {
 
         Optional<Player> player = team.findByName("Mario");
         Assertions.assertTrue(player.isPresent());
-        team.deleteById("Mario");
+        team.deleteByName("Mario");
         Assertions.assertTrue(team.findByName("Mario").isEmpty());
     }
 
