@@ -9,10 +9,8 @@ import javax.json.bind.annotation.JsonbProperty;
 import javax.json.bind.annotation.JsonbVisibility;
 import java.util.Objects;
 
-@Entity
+@Entity//TODO remove annotations
 public class Player {
-
-
     @Id
     private String name;
 
