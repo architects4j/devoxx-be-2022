@@ -29,11 +29,8 @@ import javax.enterprise.inject.se.SeContainerInitializer;
 public class App {
     public static void main(final String[] args) {
 
-        try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            StorageManager manager = container.select(StorageManager.class).get();
-            Object root = manager.root();
-            System.out.println("the root value: " + root);
-            final TeamService service= container.select(TeamService.class).get();
+        try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
+            final TeamService service = container.select(TeamService.class).get();
             Player mario = Player.builder()
                     .name("Mario")
                     .score(10L)
