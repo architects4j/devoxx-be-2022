@@ -1,25 +1,9 @@
-# Jakarta EE Meets NoSQL
+# Jakarta NoSQL and Java SE sample
 
-## Otavio Santana (@otaviojava)
+## Using Docker
 
-![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
-
-###  Dependencies
-
-Do not change the dependencies(pom.xml) due to the currently undefined (5/2021) of the names of the javax packages to jakarta:
-
-`<groupId>org.jboss.weld.se</groupId>`
-
-`<artifactId>weld-se-shaded</artifactId>`
-
-`<groupId>org.eclipse</groupId>`
-
-`<artifactId>yasson</artifactId>`
-
-microprofile-config.properties:
-
-`keyvalue.provider=org.eclipse.jnosql.communication.redis.keyvalue.RedisConfiguration`
-
-`column.provider=org.eclipse.jnosql.communication.cassandra.column.CassandraConfiguration`
-
-`document.provider=org.eclipse.jnosql.communication.mongodb.document.MongoDBDocumentConfiguration`
+1. Install docker: https://www.docker.com/
+1. https://hub.docker.com/_/mongo
+1. Run docker command
+1. Run MongoDB: verify MongoDB image name with the command `docker images`, it can be mongodb or mongo, and then execute this
+    * `docker run -d --name mongodb-instance -p 27017:27017 mongo`
