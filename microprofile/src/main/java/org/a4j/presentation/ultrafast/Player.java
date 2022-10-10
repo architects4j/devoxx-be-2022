@@ -67,7 +67,4 @@ public class Player {
                 '}';
     }
 
-    public static PlayerBuilder builder() {
-        return new PlayerBuilder();
-    }
 }
