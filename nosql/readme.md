@@ -22,7 +22,6 @@ To launch the test page, open your browser at the following URL
 http://localhost:8080/index.html  
 ```
 
-
 ## Using Docker
 
 1. Install docker: https://www.docker.com/
@@ -30,7 +29,6 @@ http://localhost:8080/index.html
 1. Run docker command
 1. Run MongoDB: verify MongoDB image name with the command `docker images`, it can be mongodb or mongo, and then execute this
     * `docker run -d --name mongodb-instance -p 27017:27017 mongo`
-
 
 To execute the tests:
 
