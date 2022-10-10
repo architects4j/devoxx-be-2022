@@ -4,20 +4,6 @@
 
 ![Docker](https://www.docker.com/sites/default/files/horizontal_large.png)
 
-## Run as Docker-Compose
-
-### Start fresh environment
-
-`docker-compose -f docker-compose.yml up -d`
-
-### Stop and Remove
-
-`docker-compose -f docker-compose.yml down`
-
-###  List services
-
-`docker-compose -f docker-compose.yml ps`
-
 ###  Dependencies
 
 Do not change the dependencies(pom.xml) due to the currently undefined (5/2021) of the names of the javax packages to jakarta:
