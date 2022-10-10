@@ -1,13 +1,9 @@
 package org.a4j.presentation.ultrafast;
 
-import org.a4j.presentation.ultrafast.infra.FieldPropertyVisibilityStrategy;
-
 import javax.json.bind.annotation.JsonbCreator;
 import javax.json.bind.annotation.JsonbProperty;
-import javax.json.bind.annotation.JsonbVisibility;
 import java.util.Objects;
 
-@JsonbVisibility(FieldPropertyVisibilityStrategy.class)
 public class Player {
     private final String name;
     private final long score;
@@ -69,9 +65,5 @@ public class Player {
                 ", position=" + position +
                 ", city='" + city + '\'' +
                 '}';
-    }
-
-    public static PlayerBuilder builder() {
-        return new PlayerBuilder();
     }
 }
