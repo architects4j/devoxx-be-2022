@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Player {
     private final String name;
-    private final long score;git
+    private final long score;
     private final Position position;
     private final String city;
 
