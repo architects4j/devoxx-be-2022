@@ -352,8 +352,7 @@ allowing it to persist data on <a href="mongodb.com">MongoDB</a>. </p>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>docker run -d --name mongodb-instance -p <span class="m">27017</span>:27017 mongo
 </code></pre></div>
 <h3 id="the-project"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.2.2</span> The project</h3>
-<p>You can use the delivered service you finished on the lab <a href="challenges/04_challenge_rest.md">Golden APIs for ACME Store</a>. </p>
-<p>If you prefer, you can also start from this quickstart application. It's similar to a resulting application from the previous lab with extra instructions on what the required tasks:</p>
+<p>To start, we'll use a quickstart application. </p>
 <p><a href="https://github.com/architects4j/helidon-microstream-training-labs-foundation/tree/main/acme-store-rest-nosql">https://github.com/architects4j/helidon-microstream-training-labs-foundation/tree/main/acme-store-rest-nosql</a></p>
 <p>To start the application, you can build, package and run it as usual.</p>
 <h2 id="implementing-the-solution"><span class="enumerate-headings-plugin enumerate-heading-plugin">3.3</span> Implementing the solution</h2>
@@ -370,7 +369,7 @@ allowing it to persist data on <a href="mongodb.com">MongoDB</a>. </p>
 <a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a>            <span class="nt">&lt;groupId&gt;</span>org.eclipse.jnosql.communication<span class="nt">&lt;/groupId&gt;</span>
 <a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a>            <span class="nt">&lt;artifactId&gt;</span>mongodb-driver<span class="nt">&lt;/artifactId&gt;</span>
 <a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a>            <span class="nt">&lt;version&gt;</span>1.0.0-b4<span class="nt">&lt;/version&gt;</span>
-<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="nt">&lt;/dependency&gt;</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a>        <span class="nt">&lt;/dependency&gt;</span>u
 </code></pre></div></p>
 </li>
 <li>
@@ -387,8 +386,8 @@ allowing it to persist data on <a href="mongodb.com">MongoDB</a>. </p>
 <ol>
 <li>Configure the <code>Product</code> as an entity bean:</li>
 <li>Add the <code>@jakarta.nosql.mapping.Entity</code> declaration;</li>
-<li>Add an empty constructor method;
- g3. Annotate the attributes with adequate column configurations. Use <code>@Id</code> and <code>@Column</code>. Remember, the attributes can no longer be final.</li>
+<li>Add an empty constructor method;</li>
+<li>Annotate the attributes with adequate column configurations. Use <code>@Id</code> and <code>@Column</code>. Remember, the attributes can no longer be final.</li>
 </ol>
 </li>
 <li>
