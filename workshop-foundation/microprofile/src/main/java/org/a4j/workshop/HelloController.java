@@ -13,6 +13,6 @@ public class HelloController {
 
     @GET
     public String sayHello() {
-        return "Hello World";
+        return "Hello Devoxx";
     }
 }

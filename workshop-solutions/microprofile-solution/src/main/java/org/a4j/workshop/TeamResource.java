@@ -31,7 +31,7 @@ public class TeamResource {
     @GET
     @Path("{name}")
     public Player findBy(@PathParam("name") String name) {
-        return this.service.findById(name)
+        return this.service.findByName(name)
                 .orElseThrow(() -> new WebApplicationException(Response.Status.NOT_FOUND));
     }
 

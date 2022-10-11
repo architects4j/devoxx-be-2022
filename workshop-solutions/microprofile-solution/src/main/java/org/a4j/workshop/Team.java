@@ -10,40 +10,31 @@ import java.util.Set;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+// Annotate the team, our root element, with @Storage
 @Storage
 public class Team {
 
     private final Set<Player> players = new HashSet<>();
 
     public void add(Player player) {
-        Objects.requireNonNull(player, "player is not null");
+        // add new player to the Set of players
         this.players.add(player);
     }
 
-    public void add(Supplier<Player> supplier) {
-        Objects.requireNonNull(supplier, "supplier is required");
-        add(supplier.get());
-    }
-
     public Optional<Player> findByName(String name) {
-        Objects.requireNonNull(name, "name is required");
+        // use Java streams to find the player that has the input name
         return this.players.stream()
                 .filter(b -> name.equals(b.getName()))
                 .findFirst();
     }
 
     public void deleteById(String name) {
-        Objects.requireNonNull(name, "name is required");
+        // Remove the object with the received name from the list of players using native Java APIs (e.g. streams)
         this.players.removeIf(b -> name.equals(b.getName()));
     }
 
-    public String getPlayersName(){
-        return players.stream()
-                .map(Player::getName)
-                .collect(Collectors.joining(","));
-    }
-
     public Set<Player> getPlayers() {
+        // use Java streams to return all players in the set
         return Collections.unmodifiableSet(this.players);
     }
 

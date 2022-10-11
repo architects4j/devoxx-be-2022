@@ -15,7 +15,7 @@
     <properties>
         <mpVersion>3.3</mpVersion>
         <maven.compiler.target>11</maven.compiler.target>
-        <package>org.a4j.presentation.ultrafast</package>
+        <package>org.a4j.workshop</package>
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>11</maven.compiler.source>
         <final.name>team</final.name>
@@ -37,6 +37,7 @@
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-jackson</artifactId>
         </dependency>
+        <!-- Add Microstream dependency one.microstream:microstream-integrations-cdi:07.00.00-MS-GA -->
         <dependency>
             <groupId>one.microstream</groupId>
             <artifactId>microstream-integrations-cdi</artifactId>
