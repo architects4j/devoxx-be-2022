@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import jakarta.nosql.mapping.Column;
 import jakarta.nosql.mapping.Entity;

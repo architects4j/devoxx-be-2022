@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import javax.json.bind.annotation.JsonbCreator;
 import javax.json.bind.annotation.JsonbProperty;

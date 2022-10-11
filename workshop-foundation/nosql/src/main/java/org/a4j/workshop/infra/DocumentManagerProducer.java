@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast.infra;
+package org.a4j.workshop.infra;
 
 import jakarta.nosql.document.DocumentCollectionManager;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
