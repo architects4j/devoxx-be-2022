@@ -65,7 +65,7 @@ To get started with the labs, first you need to clone the foundation project and
 To get the foundation projects and build them, execute: 
 
 ```shell
-git clone https://github.com/architects4j/ #ToDo
+git clone https://github.com/architects4j/helidon-microstream-training-labs-foundation.git
 cd helidon-microstream-training-labs-foundation
 mvn clean package
 ```
