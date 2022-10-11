@@ -8,8 +8,8 @@
     <packaging>pom</packaging>
 
   <modules>
-    <module>cdi-se</module>
-    <module>nosql-se</module>
+    <module>demos/cdi-se</module>
+    <module>demos/nosql-se</module>
     <module>workshop-foundation/microprofile</module>
     <module>workshop-foundation/nosql</module>
     <module>workshop-solutions/microprofile-solution</module>
