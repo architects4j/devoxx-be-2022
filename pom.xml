@@ -6,12 +6,13 @@
     <artifactId>parent</artifactId>
     <version>0.0.1</version>
     <packaging>pom</packaging>
-  
+
   <modules>
     <module>cdi-se</module>
-    <module>microprofile</module>
-    <module>jakarta-ee</module>
-   <module>nosql</module>
-   <module>nosql-se</module>
+    <module>nosql-se</module>
+    <module>workshop-foundation/microprofile</module>
+    <module>workshop-foundation/nosql</module>
+    <module>workshop-solutions/microprofile-solution</module>
+    <module>workshop-solutions/nosql-solution</module>
   </modules>
 </project>
