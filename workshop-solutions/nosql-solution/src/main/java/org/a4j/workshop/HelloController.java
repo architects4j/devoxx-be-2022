@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import javax.inject.Singleton;
 import javax.ws.rs.GET;

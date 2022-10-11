@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

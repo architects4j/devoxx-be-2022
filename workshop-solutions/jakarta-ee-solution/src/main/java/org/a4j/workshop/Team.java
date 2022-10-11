@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import one.microstream.integrations.cdi.types.Storage;
 
