@@ -58,22 +58,21 @@ The project's structures are similar to:
 
 5. Open the terminal and access the project's folder. 
 
-6. Run the following maven command. Maven will download the dependencies described in the project's `pom.xml` file. It will also create an executable jar we can use to access our application: `hello-payara-microbundle.jar`.
+6. Run the following maven command. Maven will download the dependencies described in the project's `pom.xml` file. It will also create an executable jar we can use to access our application:`team.jar`.
    ```shell
    mvn clean package
    ```
 
-7. Now, let's start our first Helidon service. In the terminal, run the following command:
+7. Now, let's start our microservice. In the terminal, run the following command:
    ```bash
-   java -jar target/hello-helidon.jar
+   java -jar target/team.jar
    ```
 
 8. If everything goes well, you should see an output similar to:
-   ```
-    INFO io.helidon.microprofile.server.ServerCdiExtension !thread!: Server started on http://localhost:8080 (and all other host addresses) in 2319 milliseconds (since JVM startup).
-    INFO io.helidon.common.HelidonFeatures !thread!: Helidon MP 2.4.1 features: [CDI, Config, Fault Tolerance, Health, JAX-RS, Metrics, Open API, REST Client, Security, Server, Tracing]
-   
-   ```
+   ```bash
+2022.10.11 02:34:00 INFO io.helidon.microprofile.server.ServerCdiExtension !thread!: Server started on http://localhost:8080 (and all other host addresses) in 2277 milliseconds (since JVM startup).
+2022.10.11 02:34:00 INFO io.helidon.common.HelidonFeatures !thread!: Helidon MP 2.5.4 features:[CDI, Config, Fault Tolerance, Health, JAX-RS, Metrics, Open API, REST Client, Security, Server, Tracing] 
+    ```
 
 9. In your browser, access the page [http://localhost:8080/data/hello](http://localhost:8080/data/hello)
 

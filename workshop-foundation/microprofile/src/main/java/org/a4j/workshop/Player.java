@@ -1,4 +1,4 @@
-package org.a4j.presentation.ultrafast;
+package org.a4j.workshop;
 
 import javax.json.bind.annotation.JsonbCreator;
 import javax.json.bind.annotation.JsonbProperty;
@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Player {
     private final String name;
-    private final long score;
+    private final long score;git
     private final Position position;
     private final String city;
 
