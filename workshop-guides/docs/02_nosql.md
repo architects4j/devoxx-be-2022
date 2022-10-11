@@ -1,7 +1,5 @@
 # NoSQL persistence on Java services 
 
----- wip: update references to team
-
 In this exercise you can validate and practice your knowledge of the following concepts:
 
 * Java microservice implementation with Helidon;
@@ -12,8 +10,7 @@ In this exercise you can validate and practice your knowledge of the following c
 Getting familiar with the use case and the exercise goals described next is highly recommended, as a detailed
 step-by-step guide is not provided.
 
-**Friendly advice**: consider leveraging this opportunity to
-upskill by making the best use of your knowledge and research skills to code the solution without replicating the
+**Friendly advice**: consider leveraging this opportunity to upskill by making the best use of your knowledge and research skills to code the solution without replicating the
 provided solution.
 
 ## Scenario
@@ -58,10 +55,7 @@ docker run -d --name mongodb-instance -p 27017:27017 mongo
 
 ### The project
 
-You can use the delivered service you finished on the lab [Golden APIs for ACME Store](challenges/04_challenge_rest.md). 
-
-If you prefer, you can also start from this quickstart application. It's similar to a 
-resulting application from the previous lab with extra instructions on what the required tasks:
+To start, we'll use a quickstart application. 
 
 [https://github.com/architects4j/helidon-microstream-training-labs-foundation/tree/main/acme-store-rest-nosql](https://github.com/architects4j/helidon-microstream-training-labs-foundation/tree/main/acme-store-rest-nosql)
 
